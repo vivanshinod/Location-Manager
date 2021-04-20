@@ -12,6 +12,14 @@ First create Background service named LocationService and add it in AndroidManif
  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
+now make one Constant class and add below parameters
+    static final int LOCATION_SERVICE_ID = 190;
+    static  final String ACTION_START_LOCATION_SERVICE = "startLocation";
+    static  final String ACTION_STOP_LOCATION_SERVICE = "stopLocation";
+    public static final String PREF_SELECTED_CURRENT_AREA = "prefselectedcurrentarea";
+    public static final String PREF_SELECTED_AREA = "prefselectedarea";
+    public static final String PREF_CURRENT_AREA = "prefcurrentarea";
+
 then in the onCreate() of your MainActitivy add below code to start service like below:
 
 private boolean isLocationServiceRunning(){
